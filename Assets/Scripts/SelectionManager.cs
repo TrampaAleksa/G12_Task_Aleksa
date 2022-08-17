@@ -9,10 +9,13 @@ public class SelectionManager : MonoBehaviour
     private RaycastHit _hit;
 
     private SelectableObject _selectedObj;
+    private SelectableObject _nullObj;
 
     private void Start()
     {
         _camera = Camera.main;
+        _nullObj = Instantiate(new GameObject("Null Object").AddComponent<SelectableObject>());
+        _selectedObj = _nullObj;
     }
 
     private void Update()
@@ -44,9 +47,11 @@ public class SelectionManager : MonoBehaviour
     {
         if (!Input.GetKeyUp(KeyCode.Mouse0))
             return;
-        
+        _selectedObj = _nullObj;
         print("Released Mouse Click");
     }
+
+    
 
     private bool MouseOverSelectableObj(Ray ray)
     {
