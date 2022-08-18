@@ -6,6 +6,7 @@ public class ColorChanger : MonoBehaviour
     private Material materialToApply;
     public void ChangeColor()
     {
-        SelectionManager.Instance.SelectedObj.GetComponent<Renderer>().material = materialToApply;
+        SelectionManager.Instance.SelectedObj.CurrentMaterial = materialToApply;
+        SelectionManager.Instance.SelectedObj.ChangeMaterial(materialToApply);
     }
 }

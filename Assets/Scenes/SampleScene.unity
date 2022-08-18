@@ -340,6 +340,7 @@ GameObject:
   - component: {fileID: 236458656}
   - component: {fileID: 236458655}
   - component: {fileID: 236458654}
+  - component: {fileID: 236458657}
   m_Layer: 5
   m_Name: Red
   m_TagString: Untagged
@@ -411,7 +412,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 236458655}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 236458657}
+        m_TargetAssemblyTypeName: ColorChanger, Assembly-CSharp
+        m_MethodName: ChangeColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &236458655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,6 +463,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236458652}
   m_CullTransparentMesh: 1
+--- !u!114 &236458657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236458652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acfb894b750f45b2b6ffec9ed3dcedf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialToApply: {fileID: 2100000, guid: faafc20c6f3289648a90f8c7883e2dc4, type: 2}
 --- !u!1 &266722898
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,6 +589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainStructure: {fileID: 1350165021}
   heightOffset: 5
+  materialWhileSelected: {fileID: 2100000, guid: 02b0130f5b2a86a49ae51cb6401f1401, type: 2}
 --- !u!1 &515674689
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,6 +702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainStructure: {fileID: 1350165021}
   heightOffset: 2.5
+  materialWhileSelected: {fileID: 2100000, guid: 02b0130f5b2a86a49ae51cb6401f1401, type: 2}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,6 +1356,7 @@ GameObject:
   - component: {fileID: 1658687253}
   - component: {fileID: 1658687252}
   - component: {fileID: 1658687251}
+  - component: {fileID: 1658687254}
   m_Layer: 5
   m_Name: Blue
   m_TagString: Untagged
@@ -1399,7 +1428,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1658687252}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1658687254}
+        m_TargetAssemblyTypeName: ColorChanger, Assembly-CSharp
+        m_MethodName: ChangeColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1658687252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1438,6 +1479,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658687249}
   m_CullTransparentMesh: 1
+--- !u!114 &1658687254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658687249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acfb894b750f45b2b6ffec9ed3dcedf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialToApply: {fileID: 2100000, guid: 67e460a2676712f43a76b94c55fa1157, type: 2}
 --- !u!1 &1692331313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,6 +1604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainStructure: {fileID: 1350165021}
   heightOffset: 2.5
+  materialWhileSelected: {fileID: 2100000, guid: 02b0130f5b2a86a49ae51cb6401f1401, type: 2}
 --- !u!1 &1749610674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,6 +1617,7 @@ GameObject:
   - component: {fileID: 1749610678}
   - component: {fileID: 1749610677}
   - component: {fileID: 1749610676}
+  - component: {fileID: 1749610679}
   m_Layer: 5
   m_Name: Green
   m_TagString: Untagged
@@ -1633,7 +1689,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1749610677}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1749610679}
+        m_TargetAssemblyTypeName: ColorChanger, Assembly-CSharp
+        m_MethodName: ChangeColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1749610677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1672,6 +1740,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749610674}
   m_CullTransparentMesh: 1
+--- !u!114 &1749610679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749610674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acfb894b750f45b2b6ffec9ed3dcedf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialToApply: {fileID: 2100000, guid: 357aee710aa23094f94f5c8319dd924a, type: 2}
 --- !u!1 &1755321961
 GameObject:
   m_ObjectHideFlags: 0
