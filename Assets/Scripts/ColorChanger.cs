@@ -1,9 +1,11 @@
 using UnityEngine;
 
-internal class ColorChanger : MonoBehaviour
+public class ColorChanger : MonoBehaviour
 {
-    public void ChangeColor(SelectableObject objToChange)
+    [SerializeField]
+    private Material materialToApply;
+    public void ChangeColor()
     {
-        
+        SelectionManager.Instance.SelectedObj.GetComponent<Renderer>().material = materialToApply;
     }
 }

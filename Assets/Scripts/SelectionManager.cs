@@ -5,56 +5,23 @@ using UnityEngine;
 
 public class SelectionManager : MonoBehaviour
 {
-    private Camera _camera;
-    private RaycastHit _hit;
-
     private SelectableObject _selectedObj;
-    private SelectableObject _nullObj;
+    public static SelectionManager Instance;
 
-    private void Start()
+    public SelectableObject SelectedObj
     {
-        _camera = Camera.main;
-        _nullObj = Instantiate(new GameObject("Null Object").AddComponent<SelectableObject>());
-        _selectedObj = _nullObj;
+        get => _selectedObj;
+        set => _selectedObj = value;
     }
 
-    private void Update()
+    private void Awake()
     {
-        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-        HandleMouseClickDown(ray);
-        HandleMouseClickHold(ray);
-        HandleMouseClickUp(ray);
-    }
-
-    private void HandleMouseClickDown(Ray ray)
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Instance == null)
         {
-            if (!MouseOverSelectableObj(ray))
-                return;
-            _selectedObj = _hit.collider.GetComponent<SelectableObject>();
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-    }
-    private void HandleMouseClickHold(Ray ray)
-    {
-        if (!Input.GetKey(KeyCode.Mouse0))
-            return;
-        if (!MouseOverSelectableObj(ray))
-            return;
-        _selectedObj.UpdateSelection();
-    }
-    private void HandleMouseClickUp(Ray ray)
-    {
-        if (!Input.GetKeyUp(KeyCode.Mouse0))
-            return;
-        _selectedObj = _nullObj;
-        print("Released Mouse Click");
-    }
-
-    
-
-    private bool MouseOverSelectableObj(Ray ray)
-    {
-        return Physics.Raycast(ray, out _hit) && _hit.collider.CompareTag("Selectable");
+        else
+            Destroy(gameObject);
     }
 }

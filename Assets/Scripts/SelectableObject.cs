@@ -1,28 +1,7 @@
 using UnityEngine;
 
-internal class SelectableObject : MonoBehaviour
+public class SelectableObject : MonoBehaviour
 {
-    public void StartSelection()
-    {
-        print("Selected object: " + gameObject.name);
-    }
-
-    public void UpdateSelection()
-    {
-        print("Holding mouse over selected object: " + gameObject.name);
-    }
-
-    public void EndSelection()
-    {
-        print("Unselected object: " + gameObject.name);
-    }
-
-    public void ChangeColor(ColorChanger colorChanger)
-    {
-        colorChanger.ChangeColor(this);
-    }
-    
-    
     // -------------- Movement Across Plane -------------- //
     private float dist;
     private Vector3 v3Offset;
@@ -32,7 +11,8 @@ internal class SelectableObject : MonoBehaviour
  
     void OnMouseDown()
     {
-      
+        SelectionManager.Instance.SelectedObj = this;
+        
         plane.SetNormalAndPosition(mainStructure.transform.up, mainStructure.transform.position);
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);     
         float dist;
