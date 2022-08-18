@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class SelectionManager : MonoBehaviour
 {
-    private SelectableObject _selectedObj;
+    private GameObject _selectedObj;
     public static SelectionManager Instance;
-
-    public SelectableObject SelectedObj
+    
+    public GameObject SelectedObj
     {
         get => _selectedObj;
         set => _selectedObj = value;

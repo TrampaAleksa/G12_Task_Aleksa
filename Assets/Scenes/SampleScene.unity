@@ -489,6 +489,8 @@ GameObject:
   - component: {fileID: 266722901}
   - component: {fileID: 266722900}
   - component: {fileID: 266722903}
+  - component: {fileID: 266722905}
+  - component: {fileID: 266722904}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Selectable
@@ -589,7 +591,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainStructure: {fileID: 1350165021}
   heightOffset: 5
+--- !u!114 &266722904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266722898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd87b8ce38041e4847be4ac78c2a307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   materialWhileSelected: {fileID: 2100000, guid: 02b0130f5b2a86a49ae51cb6401f1401, type: 2}
+--- !u!114 &266722905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266722898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288cfd93015746a38447e7a0818bec25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &515674689
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,6 +629,8 @@ GameObject:
   - component: {fileID: 515674692}
   - component: {fileID: 515674691}
   - component: {fileID: 515674694}
+  - component: {fileID: 515674696}
+  - component: {fileID: 515674695}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Selectable
@@ -702,7 +730,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainStructure: {fileID: 1350165021}
   heightOffset: 2.5
+--- !u!114 &515674695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515674689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd87b8ce38041e4847be4ac78c2a307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   materialWhileSelected: {fileID: 2100000, guid: 02b0130f5b2a86a49ae51cb6401f1401, type: 2}
+--- !u!114 &515674696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515674689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288cfd93015746a38447e7a0818bec25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,6 +1557,8 @@ GameObject:
   - component: {fileID: 1692331316}
   - component: {fileID: 1692331315}
   - component: {fileID: 1692331318}
+  - component: {fileID: 1692331320}
+  - component: {fileID: 1692331319}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Selectable
@@ -1604,7 +1658,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainStructure: {fileID: 1350165021}
   heightOffset: 2.5
+--- !u!114 &1692331319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692331313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd87b8ce38041e4847be4ac78c2a307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   materialWhileSelected: {fileID: 2100000, guid: 02b0130f5b2a86a49ae51cb6401f1401, type: 2}
+--- !u!114 &1692331320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692331313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288cfd93015746a38447e7a0818bec25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1749610674
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using UnityEngine;
 
 public class ColorChanger : MonoBehaviour
@@ -6,7 +7,11 @@ public class ColorChanger : MonoBehaviour
     private Material materialToApply;
     public void ChangeColor()
     {
-        SelectionManager.Instance.SelectedObj.CurrentMaterial = materialToApply;
-        SelectionManager.Instance.SelectedObj.ChangeMaterial(materialToApply);
+        var objectColor =
+            SelectionManager.Instance
+                .SelectedObj.GetComponent<DraggableObjectColor>();
+        
+        objectColor.CurrentMaterial = materialToApply;
+        objectColor.ChangeMaterial(materialToApply);
     }
 }
