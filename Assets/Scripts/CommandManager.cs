@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -31,7 +33,6 @@ namespace DefaultNamespace
 
         public void ExecuteCommand(ICommand commandToExecute)
         {
-            commandToExecute.SaveState();
             _commands.Push(commandToExecute);
             commandToExecute.Execute();
         }
