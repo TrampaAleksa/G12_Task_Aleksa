@@ -8,6 +8,9 @@ public class ColorChanger : MonoBehaviour
 
     public void ChangeColor()
     {
+        if (ObjectNotSelected())
+            return;
+
         var objectColor =
             SelectionManager.Instance
                 .SelectedObj.GetComponent<DraggableObjectColor>();
@@ -19,5 +22,17 @@ public class ColorChanger : MonoBehaviour
                 objectColor.gameObject);
         
         CommandManager.Instance.ExecuteCommand(command);
+    }
+
+    private static bool ObjectNotSelected()
+    {
+        var isNull = SelectionManager.Instance
+            .SelectedObj.name == "Null Object";
+        if (isNull)
+        {
+            Debug.Log("Can't change color: No Object was selected");
+            return true;
+        }
+        return false;
     }
 }
