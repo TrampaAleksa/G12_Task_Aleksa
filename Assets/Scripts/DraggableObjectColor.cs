@@ -1,4 +1,5 @@
 using System;
+using com.snd.plugin;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -29,6 +30,12 @@ namespace DefaultNamespace
         public void ChangeMaterial(Material materialToApply)
         {
             gameObject.GetComponent<Renderer>().material = materialToApply;
+        }
+
+        public void TemporaryColor(float duration)
+        {
+            ChangeMaterial(materialWhileSelected);
+            gameObject.AddComponent<TimedAction>().StartTimedAction(() => ChangeMaterial(CurrentMaterial), duration);
         }
     }
 }

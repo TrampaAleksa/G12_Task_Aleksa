@@ -24,9 +24,14 @@ namespace DefaultNamespace
         public void Undo()
         {
             SelectionManager.Instance.SelectedObj = _previouslySelectedObj;
-            
+            VisualizeSelectionUndo();
             Debug.Log("Undo: Selected Object is now: " + SelectionManager.Instance.SelectedObj.name);
 
+        }
+
+        private static void VisualizeSelectionUndo()
+        {
+            SelectionManager.Instance.SelectedObj.GetComponent<DraggableObjectColor>().TemporaryColor(0.2f);
         }
     }
 }
