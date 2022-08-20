@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class SelectionManager : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject nullSelectedObject; // Initial reference to avoid Null Reference problems
+    
     private GameObject _selectedObj;
     public static SelectionManager Instance;
     
@@ -18,6 +21,7 @@ public class SelectionManager : MonoBehaviour
     {
         if (Instance == null)
         {
+            _selectedObj = nullSelectedObject;
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }

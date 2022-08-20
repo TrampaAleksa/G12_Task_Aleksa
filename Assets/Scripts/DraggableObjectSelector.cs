@@ -4,9 +4,10 @@ namespace DefaultNamespace
 {
     public class DraggableObjectSelector : MonoBehaviour
     {
-        void OnMouseDown() 
+        void OnMouseDown()
         {
-            SelectionManager.Instance.SelectedObj = gameObject;
+            var selectionCommand = new DraggableObjectCommand(gameObject);
+            CommandManager.Instance.ExecuteCommand(selectionCommand);
         }
     }
 }

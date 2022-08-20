@@ -25,6 +25,8 @@ namespace DefaultNamespace
         
         private void ChangeColor(Material toChangeTo)
         {
+            Debug.Log("Undo: Changed Material of Object: " + _selectedObject.name);
+            
             var objectColor =
                 _selectedObject.GetComponent<DraggableObjectColor>();
             objectColor.CurrentMaterial = toChangeTo;

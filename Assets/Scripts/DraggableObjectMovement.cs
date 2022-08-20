@@ -13,8 +13,6 @@ public class DraggableObjectMovement : MonoBehaviour
 
     void OnMouseDown() 
     {
-        SelectionManager.Instance.SelectedObj = gameObject;
-        
         plane.SetNormalAndPosition(mainStructure.transform.up, mainStructure.transform.position);
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);     
         float dist;
