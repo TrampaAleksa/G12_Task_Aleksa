@@ -1,4 +1,5 @@
 using System;
+using DefaultNamespace;
 using UnityEngine;
 
 public class DraggableObjectMovement : MonoBehaviour
@@ -11,6 +12,8 @@ public class DraggableObjectMovement : MonoBehaviour
     public GameObject mainStructure;
     public float heightOffset = 0.5f;
 
+    private Vector3 _initialPosition;
+
     void OnMouseDown() 
     {
         plane.SetNormalAndPosition(mainStructure.transform.up, mainStructure.transform.position);
@@ -18,6 +21,8 @@ public class DraggableObjectMovement : MonoBehaviour
         float dist;
         plane.Raycast(ray, out dist); 
         v3Offset = transform.position - ray.GetPoint(dist);
+
+        _initialPosition = transform.position;
     }
 
     void OnMouseDrag()
@@ -27,6 +32,18 @@ public class DraggableObjectMovement : MonoBehaviour
         plane.Raycast(ray, out dist);    
         Vector3 v3Pos = ray.GetPoint(dist);    
         Vector3 lastPos = v3Pos + v3Offset;      
-        transform.position = plane.ClosestPointOnPlane(lastPos) + Vector3.up*heightOffset;  
+        transform.position = plane.ClosestPointOnPlane(lastPos) + Vector3.up*heightOffset;
+    }
+
+    private void OnMouseUp()
+    {
+        var endPosition = transform.position;
+
+        var movementCommand = new ObjectMovementCommand(
+            _initialPosition,
+            endPosition,
+            gameObject);
+        
+        CommandManager.Instance.ExecuteCommand(movementCommand);
     }
 }

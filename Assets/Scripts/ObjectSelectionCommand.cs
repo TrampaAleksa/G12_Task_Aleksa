@@ -2,12 +2,12 @@ using UnityEngine;
 
 namespace DefaultNamespace
 {
-    public class DraggableObjectCommand : ICommand
+    public class ObjectSelectionCommand : ICommand
     {
         private GameObject _previouslySelectedObj;
         private GameObject _currentlySelectedObj;
 
-        public DraggableObjectCommand(GameObject currentlySelectedObj)
+        public ObjectSelectionCommand(GameObject currentlySelectedObj)
         {
             _currentlySelectedObj = currentlySelectedObj;
         }

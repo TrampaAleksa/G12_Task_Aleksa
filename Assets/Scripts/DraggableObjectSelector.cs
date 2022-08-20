@@ -6,7 +6,7 @@ namespace DefaultNamespace
     {
         void OnMouseDown()
         {
-            var selectionCommand = new DraggableObjectCommand(gameObject);
+            var selectionCommand = new ObjectSelectionCommand(gameObject);
             CommandManager.Instance.ExecuteCommand(selectionCommand);
         }
     }
