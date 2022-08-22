@@ -17,7 +17,7 @@ public class SelectionManager : MonoBehaviour
     
     public GameObject SelectedObj
     {
-        get => _selectedObj; //todo - Localize references to selected obj
+        get => _selectedObj;
         set => _selectedObj = value;
     }
 
