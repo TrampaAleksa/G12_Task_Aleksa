@@ -31,7 +31,8 @@ public class DraggableObjectMovement : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        ExecuteMovementCommand();
+        if (ObjectInsidePlaneCheck())
+            ExecuteMovementCommand();
     }
 
     private void PrepareForDrag()
@@ -71,5 +72,14 @@ public class DraggableObjectMovement : MonoBehaviour
             gameObject);
 
         CommandManager.Instance.ExecuteCommand(movementCommand);
+    }
+
+    public bool ObjectInsidePlaneCheck()
+    {
+        if (Physics.Raycast(transform.position, Vector3.down, 5, LayerMask.GetMask("Plane")))
+            return true;
+            
+        transform.position = _initialPosition;
+        return false;
     }
 }
