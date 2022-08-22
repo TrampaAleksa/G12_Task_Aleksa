@@ -3,6 +3,10 @@ using UnityEngine;
 
 namespace com.snd.plugin
 {
+    
+    /// <summary>
+    /// Utility class used for creating a timer that triggers an Action after it expires.
+    /// </summary>
     public class TimedAction : MonoBehaviour
     {
         private Action timerFinishedAction;

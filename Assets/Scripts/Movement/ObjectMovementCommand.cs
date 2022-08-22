@@ -2,6 +2,11 @@ using UnityEngine;
 
 namespace DefaultNamespace
 {
+    /// <summary>
+    /// Stores the <see cref="_previousPosition"/> before movement and the <see cref="_currentPosition"/> after movement is Executed.
+    /// When <see cref="Execute"/> is called moves the <see cref="_objectToMove"/> to the <see cref="_currentPosition"/>
+    /// When <see cref="Undo"/> is called returns the <see cref="_objectToMove"/> to the <see cref="_previousPosition"/>
+    /// </summary>
     public class ObjectMovementCommand : ICommand
     {
         private Vector3 _previousPosition;

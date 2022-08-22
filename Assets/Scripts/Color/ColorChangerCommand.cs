@@ -1,7 +1,12 @@
 using UnityEngine;
 
 namespace DefaultNamespace
-{
+{ 
+    /// <summary>
+    /// Stores the <see cref="_previousColor"/> before the color change and the <see cref="_newColor"/> after the change is Executed.
+    /// When <see cref="Execute"/> is called changes the <see cref="_selectedObject"/> color to the <see cref="_newColor"/>
+    /// When <see cref="Undo"/> is called returns the <see cref="_selectedObject"/> to the <see cref="_previousColor"/>
+    /// </summary>
     public class ColorChangerCommand : ICommand
     {
         private readonly Material _previousColor;

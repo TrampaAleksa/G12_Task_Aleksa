@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Saves one GameObject that is "Currently Selected" by the User.
+/// Before the initial selection a null object is set to prevent any errors from Null References.
+/// </summary>
 public class SelectionManager : MonoBehaviour
 {
     [SerializeField]

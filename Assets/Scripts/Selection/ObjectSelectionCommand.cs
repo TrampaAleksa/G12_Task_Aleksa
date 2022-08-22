@@ -2,6 +2,12 @@ using UnityEngine;
 
 namespace DefaultNamespace
 {
+    
+    /// <summary>
+    /// A Command that saves the <see cref="_previouslySelectedObj"/> and the new <see cref="_currentlySelectedObj"/>.
+    /// When <see cref="Execute"/> is called the <see cref="_currentlySelectedObj"/> is the Selected object.
+    /// Once we <see cref="Undo"/> the command the Selected  object becomes the <see cref="_previouslySelectedObj"/>.
+    /// </summary>
     public class ObjectSelectionCommand : ICommand
     {
         private GameObject _previouslySelectedObj;
@@ -29,6 +35,9 @@ namespace DefaultNamespace
 
         }
 
+        /// <summary>
+        /// Used to Visualize the Undo so that the user doesn't think that the Undo failed.
+        /// </summary>
         private static void VisualizeSelectionUndo()
         {
             SelectionManager.Instance.SelectedObj.GetComponent<DraggableObjectColor>().TemporaryColor(0.2f);

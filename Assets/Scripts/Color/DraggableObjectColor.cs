@@ -32,6 +32,11 @@ namespace DefaultNamespace
             gameObject.GetComponent<Renderer>().material = materialToApply;
         }
 
+        /// <summary>
+        /// Used to change the color of the object to the <see cref="materialWhileSelected"/> color during the given time.
+        /// Then returns the color to the objects <see cref="CurrentMaterial"/> after it's finished.
+        /// </summary>
+        /// <param name="duration"></param>
         public void TemporaryColor(float duration)
         {
             ChangeMaterial(materialWhileSelected);
